@@ -31,7 +31,6 @@ echo "$(tput setaf 2)
 ( : '~'.~.'~' : ) CPU................: ${freq} MHz / ${cpu} / ${volts} (volts)
  ~ .~ (   ) ~. ~  GPU................: ${gpu}
   (  : '~' :  )   Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)
-   '~ .~~~. ~'    Running Processes..: `ps ax | wc -l | tr -d " "`
-       '~'        Local IP Addresses.: `hostname -I`
-                  WAN IP Address.....: `wget -q -O - http://icanhazip.com/ | tail`
+   '~ .~~~. ~'    Network............: `hostname -I | cut -d " " -f1` / `wget -q -O - http://icanhazip.com/ | tail`
+       '~'        
 $(tput sgr0)"
